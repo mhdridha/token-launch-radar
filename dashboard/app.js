@@ -339,7 +339,7 @@
   /* ---------- routing ---------- */
   function parseHash() {
     var raw = location.hash || '#/';
-    if (raw.indexOf('#/detail/') === 0) return { view: 'detail', slug: decodeURIComponent(raw.slice(10).split('?')[0]) };
+    if (raw.indexOf('#/detail/') === 0) return { view: 'detail', slug: decodeURIComponent(raw.slice(9).split('?')[0]) };
     if (raw === '#/live') return { view: 'live' };
     if (raw === '#/model') return { view: 'model' };
     var q = raw.indexOf('?') >= 0 ? raw.slice(raw.indexOf('?') + 1) : '';

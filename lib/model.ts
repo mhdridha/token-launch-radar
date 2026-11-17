@@ -172,6 +172,7 @@ export interface RadarData {
   floor_usd: number;
   model: ModelConstants;
   model_version: string;
+  watchlist: string[];
   watchlist_size: number;
   board_size: number;
   early_size: number;
@@ -565,6 +566,7 @@ export function buildRadar(snapshot: Snapshot, model: ModelConstants = MODEL): {
     floor_usd: snapshot.floor_usd,
     model,
     model_version: MODEL_VERSION,
+    watchlist: snapshot.watchlist,
     watchlist_size: snapshot.watchlist.length,
     board_size: board.length,
     early_size: early,
